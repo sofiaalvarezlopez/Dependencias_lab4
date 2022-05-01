@@ -1,3 +1,4 @@
+"""
 import numpy as np
 
 class columnDropperTransformer():
@@ -34,5 +35,8 @@ class outOfRangeTransformer():
         return X
     def fit(self, X, y=None):
         return self
+"""
 
+def sum(a, b):
+    return a+b
 
