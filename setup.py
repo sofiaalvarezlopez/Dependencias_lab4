@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="Dependencias_lab4",
+    name="Dependencias_Lab4",
     version="0.0.1",
     author="sofiaalvarezlopez",
     author_email="ms.alvarezl@uniandes.edu.co",
