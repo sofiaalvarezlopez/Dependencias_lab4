@@ -9,7 +9,8 @@ class columnDropperTransformer():
 
     def fit(self, X, y=None):
         return self 
-
+    
+    
 class columnZeroToNaNTransformer():
     def __init__(self,columns):
         self.columns=columns
@@ -18,7 +19,7 @@ class columnZeroToNaNTransformer():
         return X
     def fit(self, X, y=None):
         return self
-
+    
 class outOfRangeTransformer():
     def __init__(self):
         pass
@@ -30,8 +31,7 @@ class outOfRangeTransformer():
         X["GDP"] = X["GDP"].apply( lambda x : x if x>=200 else np.nan )
         X["Population"] = X["Population"].apply( lambda x : x if x>=800 else np.nan )
         X["Total expenditure"] = X["Total expenditure"].apply( lambda x : x if x>0 else np.nan )
-        X = X.fillna(X.mean())
+        X = X.apply(lambda x:x.fillna(x.mean()))
         return X
     def fit(self, X, y=None):
         return self
-
